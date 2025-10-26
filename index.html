@@ -205,6 +205,108 @@
             color: #667eea;
         }
 
+        /* Projects Gallery Section */
+        .projects {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 80px 20px;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .projects h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-category {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .project-info p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .project-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-feature {
+            background: #f8f9fa;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: #667eea;
+        }
+
         /* Video Gallery Section */
         .video-gallery {
             background: rgba(255, 255, 255, 0.95);
@@ -219,12 +321,6 @@
             font-size: 2.5rem;
             margin-bottom: 1rem;
             color: #333;
-        }
-
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 3rem;
         }
 
         .video-grid {
@@ -463,6 +559,10 @@
             .video-grid {
                 grid-template-columns: 1fr;
             }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -479,6 +579,7 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#videos">YouTube Videos</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -490,7 +591,7 @@
         <div class="container">
             <h1>Welcome to PTY-Tech</h1>
             <p>Professional Welding & Solar Solutions for Your Business</p>
-            <a href="#videos" class="btn">Watch Our Videos</a>
+            <a href="#projects" class="btn">View Our Projects</a>
             <a href="https://www.youtube.com/@ptytech" target="_blank" class="youtube-btn">
                 Visit YouTube Channel
             </a>
@@ -525,6 +626,88 @@
                     <a href="https://www.youtube.com/@ptytech" target="_blank" class="youtube-btn">
                         Learn More
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Gallery Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2>Our Projects</h2>
+            <p class="section-subtitle">See our successful welding and solar installation projects</p>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Solar Installation">
+                        <div class="project-category">Solar</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Residential Solar System</h3>
+                        <p>5kW solar installation for a family home in Yangon with battery backup system</p>
+                        <div class="project-features">
+                            <span class="project-feature">5kW Capacity</span>
+                            <span class="project-feature">Battery Backup</span>
+                            <span class="project-feature">24/7 Power</span>
+                        </div>
+                        <a href="#contact" class="training-btn">Get Similar Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Industrial Welding">
+                        <div class="project-category">Welding</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Industrial Welding Machine Repair</h3>
+                        <p>Complete overhaul and repair of industrial welding equipment for manufacturing plant</p>
+                        <div class="project-features">
+                            <span class="project-feature">Industrial Grade</span>
+                            <span class="project-feature">Quick Repair</span>
+                            <span class="project-feature">6 Months Warranty</span>
+                        </div>
+                        <a href="#contact" class="training-btn">Inquire Repair</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Commercial Solar">
+                        <div class="project-category">Solar</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Commercial Solar Setup</h3>
+                        <p>10kW commercial solar system for small business with grid-tie functionality</p>
+                        <div class="project-features">
+                            <span class="project-feature">10kW System</span>
+                            <span class="project-feature">Grid-Tie</span>
+                            <span class="project-feature">Cost Saving</span>
+                        </div>
+                        <a href="#contact" class="training-btn">Get Quote</a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Welding Training">
+                        <div class="project-category">Training</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Welding Training Workshop</h3>
+                        <p>Professional welding training for 15 students with hands-on practical sessions</p>
+                        <div class="project-features">
+                            <span class="project-feature">15 Students</span>
+                            <span class="project-feature">Practical Training</span>
+                            <span class="project-feature">Certificate</span>
+                        </div>
+                        <a href="#contact" class="training-btn">Join Training</a>
+                    </div>
                 </div>
             </div>
         </div>
