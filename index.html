@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTY-Tech - Professional Welding & Solar Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            color: #ff6b6b;
+        }
+
+        .logo-text-blue {
+            color: #667eea;
+        }
+
+        .logo-text-purple {
+            color: #764ba2;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .btn:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .youtube-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ff0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 10px 5px;
+        }
+
+        .youtube-btn:hover {
+            background: #cc0000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+        }
+
+        .services {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 80px 20px;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        /* Video Gallery Section */
+        .video-gallery {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 80px 20px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .video-gallery h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .video-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .video-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 0, 0, 0.8);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .watch-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .watch-btn:hover {
+            background: #cc0000;
+            transform: translateY(-2px);
+        }
+
+        .channel-link {
+            margin-top: 3rem;
+        }
+
+        .channel-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .channel-btn:hover {
+            background: #cc0000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .contact-details {
+            font-size: 1.2rem;
+            line-height: 2;
+        }
+
+        .contact-details a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🛠️</span>
+                <span class="logo-text-blue">PTY</span>
+                <span style="color: #333;">-</span>
+                <span class="logo-text-purple">Tech</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#videos">YouTube Videos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Welcome to PTY-Tech</h1>
+            <p>Professional Welding & Solar Solutions for Your Business</p>
+            <a href="#videos" class="btn">Watch Our Videos</a>
+            <a href="https://www.youtube.com/@ptytech" target="_blank" class="youtube-btn">
+                Visit YouTube Channel
+            </a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Welding Machine Repair</h3>
+                    <p>Professional repair and maintenance services for all types of welding machines and equipment.</p>
+                    <a href="https://www.youtube.com/@ptytech" target="_blank" class="youtube-btn">
+                        Watch Repair Videos
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">☀️</div>
+                    <h3>Solar System Installation</h3>
+                    <p>Complete solar power solutions for homes and businesses including installation and maintenance.</p>
+                    <a href="https://www.youtube.com/@ptytech" target="_blank" class="youtube-btn">
+                        Watch Installation Videos
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Technical Consultancy</h3>
+                    <p>Expert advice and solutions for your industrial and energy needs.</p>
+                    <a href="https://www.youtube.com/@ptytech" target="_blank" class="youtube-btn">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Videos Gallery Section -->
+    <section class="video-gallery" id="videos">
+        <div class="container">
+            <h2>Our YouTube Videos</h2>
+            <p class="section-subtitle">Watch our latest welding and solar installation tutorials on YouTube</p>
+            
+            <div class="video-grid">
+                <!-- Video 1 -->
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/v9RRpyjvT4I/maxresdefault.jpg" alt="Welding Demo 1">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <h3>Welding Machine Repair Tutorial</h3>
+                    <p>Learn professional welding machine repair techniques</p>
+                    <a href="https://youtu.be/v9RRpyjvT4I" target="_blank" class="watch-btn">
+                        Watch on YouTube
+                    </a>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/XDh7d8WFf8Y/maxresdefault.jpg" alt="Welding Demo 2">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <h3>Advanced Welding Techniques</h3>
+                    <p>Master advanced welding methods and tips</p>
+                    <a href="https://youtu.be/XDh7d8WFf8Y" target="_blank" class="watch-btn">
+                        Watch on YouTube
+                    </a>
+                </div>
+
+                <!-- Video 3 - Channel Promo -->
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg" alt="PTY-Tech Channel">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <h3>PTY-Tech YouTube Channel</h3>
+                    <p>Visit our channel for more welding and solar videos</p>
+                    <a href="https://www.youtube.com/@ptytech" target="_blank" class="watch-btn">
+                        Visit Channel
+                    </a>
+                </div>
+            </div>
+
+            <!-- YouTube Channel Link -->
+            <div class="channel-link">
+                <a href="https://www.youtube.com/@ptytech" target="_blank" class="channel-btn">
+                    📺 Visit Our YouTube Channel - @ptytech
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-info" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-details">
+                <p><strong>Phone:</strong> <a href="tel:+959940054700">+95 994 005 4700</a></p>
+                <p><strong>Email:</strong> <a href="mailto:phyothuya.ptytech@gmail.com">phyothuya.ptytech@gmail.com</a></p>
+                <p><strong>YouTube:</strong> <a href="https://www.youtube.com/@ptytech" target="_blank">@ptytech</a></p>
+                <p><strong>Services:</strong> Welding Machine Repair | Solar Installation</p>
+                <p><strong>Availability:</strong> Monday - Saturday, 8:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PTY-Tech. All rights reserved.</p>
+            <p>Professional Welding & Solar Solutions | +95 994 005 4700 | 
+               <a href="https://www.youtube.com/@ptytech" target="_blank" style="color: #ff6b6b;">YouTube: @ptytech</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
